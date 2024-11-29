@@ -16,18 +16,6 @@ Por otro lado, contamos con [`postgres13-slave`](https://github.com/jesusalbujas
 
 ## Definición de Docker Composes
 
-- postgres_password: Define la contraseña del usuario postgres en el contenedor. 
-
-- container_name: Especifica el nombre del contenedor.
-
-- restart: Define la política de reinicio del contenedor. 
-
-- volumes: Especifica los volúmenes que se utilizarán para persistir los datos de PostgreSQL.
-
-- ports: Mapea los puertos del contenedor a los puertos del host para que sea posible acceder a PostgreSQL desde fuera del contenedor.
-
-- images: Se utilizan imágenes de PostgreSQL 13, ya que, como se mencionó anteriormente, este proyecto está basado en esta versión específica de PostgreSQL.
-
 ### PostgreSQL 13 - Master
 
 A continuación se detalla lo que contiene cada directorio
