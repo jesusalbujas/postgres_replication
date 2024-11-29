@@ -45,7 +45,8 @@ Al final del archivo, se debe agregar o modificar una línea para permitir que e
 host  replication postgres_replicator [IP_SERVER_SLAVE]/24  md5
 ```
 
-Reemplaza [IP_SERVER_SLAVE] con la dirección IP del servidor esclavo. Esto asegura que el servidor maestro permita conexiones desde esa dirección para tareas de replicación.
+> [!NOTE]
+> Reemplaza [IP_SERVER_SLAVE] con la dirección IP del servidor esclavo. Esto asegura que el servidor maestro permita conexiones desde esa dirección para tareas de replicación.
 
 ---
 
