@@ -135,4 +135,4 @@ docker compose down && docker compose up -d
 
 - Seguir el paso a paso para su correcta conexión
 - Validar la IP ingresada en el **pg_hba.conf**
-- Validar las credenciales ingresadas en el script `initdb.sh`.
+- Validar las credenciales ingresadas en el script `initdb.sh` del Esclavo.
