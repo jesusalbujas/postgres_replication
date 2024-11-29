@@ -5,8 +5,8 @@ PASSWORD_REPLICATOR="replicator"
 
 if [ "$( psql -U $POSTGRES_USER -tAc "SELECT 1 FROM pg_roles WHERE rolname='adempiere'" )" != '1' ]
 then
-    createuser -U postgres adempiere -dlrs
-    psql -U postgres -tAc "alter user adempiere password 'adempiere@123';"
+    createuser -U $POSTGRES_USER adempiere -dlrs
+    psql -U $POSTGRES_USER -tAc "alter user adempiere password '$POSTGRES_PASSWORD';"
 fi
 
 # A user must be created for replication in the main postgres
