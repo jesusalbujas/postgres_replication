@@ -8,10 +8,11 @@ MASTER_SLOT="replication_slot_1"
 
 if [ "$( psql -U $POSTGRES_USER -tAc "SELECT 1 FROM pg_roles WHERE rolname='adempiere'" )" != '1' ]
 then
-    createuser -U postgres adempiere -dlrs
-    psql -U postgres -tAc "alter user adempiere password 'adempiere@123';"
+    createuser -U $POSTGRES_USER adempiere -dlrs
+    echo "Created User: adempiere"
+    psql -U $POSTGRES_USER -tAc "alter user adempiere password '$POSTGRES_PASSWORD';"
+    echo "Created Password: $POSTGRES_PASSWORD"
 fi
-
 
 while ! pg_isready -U postgres; do
   echo "Waiting PostgreSQL..."
